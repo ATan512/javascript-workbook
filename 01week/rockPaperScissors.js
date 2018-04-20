@@ -11,13 +11,20 @@ const rl = readline.createInterface({
 function rockPaperScissors(hand1, hand2) {
 
   // Write code here
-
+  if ((hand1 = "rock") && (hand2 = "rock")) {
+    console.log("It's a tie");
+  } else if ((hand1 = "paper") && (hand2 = "paper")) {
+    console.log("It's a tie");
+  } else if ((hand1 = "scissors") && (hand2 = "scissors")) {
+    console.log("It's a tie")
+  }
 }
+
 
 function getPrompt() {
   rl.question('hand1: ', (answer1) => {
     rl.question('hand2: ', (answer2) => {
-      console.log( rockPaperScissors(answer1, answer2) );
+      console.log(rockPaperScissors(answer1, answer2));
       getPrompt();
     });
   });
