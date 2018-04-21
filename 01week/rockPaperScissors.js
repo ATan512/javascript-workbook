@@ -9,16 +9,33 @@ const rl = readline.createInterface({
 
 
 function rockPaperScissors(hand1, hand2) {
-
+  const player1 = hand1.toLowerCase().trim();
+  const player2 = hand2.toLowerCase().trim();
   // Write code here
-  if ((hand1 = "rock") && (hand2 = "rock")) {
-    console.log("It's a tie");
-  } else if ((hand1 = "paper") && (hand2 = "paper")) {
-    console.log("It's a tie");
-  } else if ((hand1 = "scissors") && (hand2 = "scissors")) {
-    console.log("It's a tie")
+  if ((player1 === player2)) {
+    console.log("It's a tie!");
+  } else if ((player1 === "rock") && (hand2 === "paper")) {
+    console.log("Hand two wins!");
+  } else if ((player1 === "rock") && (hand2 === "scissors")) {
+    console.log("Hand one wins!");
+  } else if ((player1 === "paper") && (hand2 === "rock")) {
+    console.log("Hand one wins!");
+  } else if ((player1 === "paper") && (hand2 === "scissors")) {
+    console.log("Hand two wins!");
+  } else if ((player1 === "scissors") && (hand2 === "rock")) {
+    console.log("Hand two wins!");
+  } else if ((player1 === "scissors") && hand2 === "paper") {
+    console.log("Hand one wins!");
+  } else {
+    console.log("invalid entry");
   }
 }
+
+// need to use toLowerCase() method hand1.toLowerCase()?
+// need to use the trim() method hand1.trim()
+//
+
+
 
 
 function getPrompt() {
