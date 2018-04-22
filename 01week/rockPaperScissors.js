@@ -7,35 +7,29 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
-
+//this function will run as a rock, paper, scissors game
 function rockPaperScissors(hand1, hand2) {
-  const player1 = hand1.toLowerCase().trim();
-  const player2 = hand2.toLowerCase().trim();
-  // Write code here
+  const player1 = hand1.toLowerCase().trim(); //take user's input, remove spaces, and make input lowercase
+  const player2 = hand2.toLowerCase().trim(); //take user's input, remove spaces, and make input lowercase
+  // the following if/else if statement is to check the moves
   if ((player1 === player2)) {
     console.log("It's a tie!");
-  } else if ((player1 === "rock") && (hand2 === "paper")) {
+  } else if ((player1 === "rock") && (player2 === "paper")) {
     console.log("Hand two wins!");
-  } else if ((player1 === "rock") && (hand2 === "scissors")) {
+  } else if ((player1 === "rock") && (player2 === "scissors")) {
     console.log("Hand one wins!");
-  } else if ((player1 === "paper") && (hand2 === "rock")) {
+  } else if ((player1 === "paper") && (player2 === "rock")) {
     console.log("Hand one wins!");
-  } else if ((player1 === "paper") && (hand2 === "scissors")) {
+  } else if ((player1 === "paper") && (player2 === "scissors")) {
     console.log("Hand two wins!");
-  } else if ((player1 === "scissors") && (hand2 === "rock")) {
+  } else if ((player1 === "scissors") && (player2 === "rock")) {
     console.log("Hand two wins!");
-  } else if ((player1 === "scissors") && hand2 === "paper") {
+  } else if ((player1 === "scissors") && player2 === "paper") {
     console.log("Hand one wins!");
   } else {
     console.log("invalid entry");
   }
 }
-
-// need to use toLowerCase() method hand1.toLowerCase()?
-// need to use the trim() method hand1.trim()
-//
-
-
 
 
 function getPrompt() {
