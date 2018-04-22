@@ -24,7 +24,7 @@ function rockPaperScissors(hand1, hand2) {
     console.log("Hand two wins!");
   } else if ((player1 === "scissors") && (player2 === "rock")) {
     console.log("Hand two wins!");
-  } else if ((player1 === "scissors") && player2 === "paper") {
+  } else if ((player1 === "scissors") && (player2 === "paper")) {
     console.log("Hand one wins!");
   } else {
     console.log("invalid entry");
