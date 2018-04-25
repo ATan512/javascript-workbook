@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 'use strict'
 
 /*Below is project item #1: write a JavaScript program to display the current day and time*/
@@ -87,4 +85,3 @@ function notTrue(input1, input2) { //name function and variables
   } else return false;
 }
 notTrue(0, 0);
->>>>>>> Stashed changes
