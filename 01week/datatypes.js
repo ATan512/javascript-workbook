@@ -80,7 +80,7 @@ oneTrue(1, 1); //call the function and enter in parameters
 
 /*Below is project item #8: write a JavaScript program that runs when both things are not true*/
 function notTrue(input1, input2) { //name function and variables
-  if (input1 && input2) { //write an If statement using the AND operator to see if both are true
+  if (!input1 && !input2) { //write an If statement using the AND operator to see if both are true
     // if both are true, do nothing
   } else return false;
 }
