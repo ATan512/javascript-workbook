@@ -28,53 +28,61 @@ function horizontalWin() {
   //this would be board[0][0], board[0][1], board[0][2]
   //also board[1][0] board[1][1] board[1][2]
   //and board[2][0] board[2][1] board[2][2]
-  if ((board[0][0] === board[0][1]) && (board[0][1] === board[0][2])) {
-    console.log("Three in a row win - horizontally");
-    //just return true since checkForWin() will call these?
-  } else if ((board[1][0] && board[1][1]) === (board[1][2])) {
-    return true;
-  } else if ((board[2][0] && board[2][1]) === board[2][2]) {
-    return true;
-  } else {
-    return false;
-  }
+
+  /*  if ((board[0][0] === board[0][1]) && (board[0][1] === board[0][2])) {
+      console.log("Three in a row win - horizontally");
+      //just return true since checkForWin() will call these?
+    } else if ((board[1][0] === board[1][1]) && (board[1][1]board[1][2])) {
+      return true;
+    } else if ((board[2][0] === board[2][1]) && board[2][1] === board[2][2]) {
+      return true;
+    } else {
+      return false;
+    }
+  */
+
+  if (board[0][0] === playerTurn && board[0][1] === playerTurn && board[0][2] === playerTurn) ||
+    (board[1][0] === playerTurn && board[1][1] === playerTurn && board[1][2] === playerTurn) ||
+    (board[2][0] === playerTurn && board[2][1] === playerTurn && board[2][2] === playerTurn) {
+      return true;
+    } else {
+      return false;
+    }
+
 }
 
 function verticalWin() {
   // need to check if the three columns have the same three values
   //board[0][0] board[1][0 ] board[2][2]
   //board[0][1] board[1][1] board[2][1]
-  //board[0][2] board[1][2] board[3][2]
-  if ((board[0][0] && board[1][0]) === board[2][2]) {
-    return true;
-  } else if ((board[0][1] && board[1][1]) === (board[2][1])) {
-    return true;
-  } else if ((board[0][2] && board[1][2]) === board[3][2]) {
-    return true;
-  } else {
-    return false;
-  }
+  //board[0][2] board[1][2] board[2][2]
+  if (board[0][0] === playerTurn && board[1][0] === playerTurn && board[2][0] === playerTurn) ||
+    (board[0][1] === playerTurn && board[1][1] === playerTurn && board[2][1] === playerTurn) ||
+    (board[0][2] === playerTurn && board[1][2] === playerTurn && board[2][2] === playerTurn) {
+      return true;
+    } else {
+      return false;
+    }
 }
 
 function diagonalWin() {
   // check to see if diagonals from either side have the same three values
   //board[0][0] board[1][1] board[2][2]
   //board[0][2] board[1][1] board[2][0]
-  if ((board[0][0] && board[1][1]) === board[2][2]) {
-    return true;
-  } else if ((board[0][2] && board[1][1]) === (board[2][0])) {
-    return true;
-  } else {
-    return false;
-  }
+  if (board[0][0] === playerTurn && board[1][1] === playerTurn && board[2][2] === playerTurn) ||
+    (board[0][2] === playerTurn && board[1][1] === playerTurn && board[2][0] === playerTurn) {
+      return true;
+    } else {
+      return false;
+    }
 }
 
 function checkForWin() {
-  if (horizontalWin) {
+  if (horizontalWin()) {
     console.log("You win!");
-  } else if (verticalWin) {
+  } else if (verticalWin()) {
     console.log("You win!");
-  } else if (diagonalWin) {
+  } else if (diagonalWin()) {
     console.log("You win!");
     else {
       console.log("Tie game");
@@ -83,7 +91,20 @@ function checkForWin() {
 }
 
 function ticTacToe(row, column) {
-  // Your code here
+  if (checkForWin()) {
+    let board = [
+      [' ', ' ', ' '],
+      [' ', ' ', ' '],
+      [' ', ' ', ' ']
+    ];
+    printBoard();
+  } else {
+    let playerTurn = 'O';
+  }
+  //check whatplayer it's on, after they go, switch players, if/else or switch statement
+  //if checkForWin, clear board , can set back to blank using template already given
+  // callthe printBoard to restart game
+  //players same variable but different value for each user
 }
 
 function getPrompt() {
