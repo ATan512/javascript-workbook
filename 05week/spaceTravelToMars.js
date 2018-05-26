@@ -9,24 +9,26 @@ let jobTypes = {
   programmer: 'Any Ship!'
 };
 
+//create class for crew members
 class CrewMember {
   constructor(name, job, specialSkill) {
     this.name = name;
     this.job = job;
     this.skill = specialSkill;
-    this.ship = null;
+    this.ship = null; //null so that it can be set later
   }
   enterShip(ship) {
     this.ship = ship;
   }
 }
 
+//create class for ship
 class Ship {
   constructor(name, type, ability) {
     this.name = name;
     this.type = type;
     this.ability = ability;
-    this.crew = [];
+    this.crew = []; //will store crew members in array
   }
 }
 
